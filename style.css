@@ -275,10 +275,3 @@ a:hover {
         font-size: 12px;
     }
 }
-body {
-    cursor: url("stuff/Fountain Pen & Pen Nib 3D Cursor--cursor--SweezyCursors.cur"), auto;
-}
-
-a,button {
-    cursor: url("stuff/Fountain Pen & Pen Nib 3D Cursor--pointer--SweezyCursors.cur"), pointer;
-}
