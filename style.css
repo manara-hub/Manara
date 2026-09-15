@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+.page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    height: 40vh;
+}
+main {
+    height: 50vh;
+}
+footer {
+    height: 10vh;
+}
+.header-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url(stuff/manara_header_gradient_v2_1920x450.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+#description {
+    text-align: center;
+    color: #EDE6D8;
+    animation: descriptionIn 1.2s ease-out;
+}
+#manara {
+    text-align: center;
+    position: relative;
+    left: -20px;
+    color: #C9A356;
+}
+.logo-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#logo {
+    width: 100px;
+    border-radius: 20%;
+    transition: transform 0.3s ease;
+}
+#logo:hover {
+    transform: scale(1.05) rotate(2deg);
+}
+#salafiya {
+    color: #C9A356;
+}
+#knowledge {
+    color: #C9A356;
+}
+.main-container {
+    height: 100%;
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    align-items: center;
+    background-image: url(stuff/manara_body_bg_1920x1080.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+section {
+    white-space: wrap;
+    width: 30%;
+    height: 30%;
+    color: #EDE6D8;
+}
+#about {
+    padding-right: 5%;
+    font-size: 22px;
+    height: fit-content;
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    width: 40%;
+    line-height: 1.8;
+}
+.aboutus h2 {
+    color: #C9A356;
+    font-size: 22px;
+    position: absolute;
+    top: 0;
+    width: 40%;
+    height: 10%;
+    left: 7%;
+}
+#features {
+    color: #C9A356;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: absolute;
+    left: 53%;
+    top: 0;
+    width: fit-content;
+    height: 10%;
+}
+#feats {
+    width: 40%;
+    height: fit-content;
+    position: absolute;
+    top: 20%;
+    left: 53%;
+    line-height: 2;
+}
+#bar {
+    width: 4px;
+    border-radius: 50%;
+    background-color: #C9A356;
+    position: absolute;
+    height: 65%;
+    left: 49%;
+}
+.footer-container {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(stuff/manara_footer_bg_1920x300.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+a {
+    text-decoration: none;
+    color: #EDE6D8;
+}
+a:hover {
+    transform: scale(1.1);
+    text-shadow: 2px 2px 5px #C9A356, -2px -2px 5px #C9A356;
+}
+#salafiya,
+#knowledge {
+    transition: 0.3s ease;
+}
+#salafiya:hover,
+#knowledge:hover {
+    color: #EDE6D8;
+    text-shadow: 0 0 8px #C9A356, 0 0 16px #C9A356;
+    transform: translateY(-3px);
+}
+#description:hover {
+    color: #EDE6D8;
+    text-shadow: 0 0 8px #C9A356, 0 0 16px #C9A356;
+    transform: translateY(-3px);
+}
+@keyframes descriptionIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 768px) {
+    header {
+        height: 35vh;
+        min-height: 250px;
+    }
+    .header-container {
+        padding: 20px;
+    }
+    #manara {
+        left: 0;
+    }
+    .logo-row {
+        justify-content: space-between;
+        gap: 10px;
+    }
+    #logo {
+        width: 80px;
+    }
+    #salafiya,
+    #knowledge {
+        font-size: 18px;
+    }
+    #description {
+        font-size: 18px;
+    }
+    main {
+        height: auto;
+        min-height: 55vh;
+    }
+    .main-container {
+        height: auto;
+        min-height: 55vh;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+    }
+    #about,
+    .aboutus h2,
+    #features,
+    #feats {
+        position: static;
+        width: 100%;
+        height: auto;
+    }
+    #about {
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 25px;
+    }
+    .aboutus h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    #features {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    #feats {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+    #bar {
+        position: static;
+        width: 70%;
+        height: 4px;
+        margin: 30px auto;
+    }
+    footer {
+        height: 10vh;
+        min-height: 70px;
+    }
+    .footer-container {
+        gap: 15px;
+        padding: 10px;
+    }
+    .footer-container a {
+        font-size: 14px;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        min-height: 220px;
+    }
+    .logo-row {
+        gap: 5px;
+    }
+    #logo {
+        width: 65px;
+    }
+    #salafiya,
+    #knowledge {
+        font-size: 15px;
+    }
+    #description {
+        font-size: 16px;
+    }
+    #about {
+        font-size: 16px;
+    }
+    .aboutus h2,
+    #features {
+        font-size: 18px;
+    }
+    #feats {
+        font-size: 16px;
+    }
+    .footer-container a {
+        font-size: 12px;
+    }
+}
+body {
+    cursor: url("stuff/Fountain Pen & Pen Nib 3D Cursor--cursor--SweezyCursors.cur"), auto;
+}
+
+a,button {
+    cursor: url("stuff/Fountain Pen & Pen Nib 3D Cursor--pointer--SweezyCursors.cur"), pointer;
+}
